@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(
+    45deg,
+    rgb(230, 76, 220),
+    rgb(160, 73, 214),
+    rgb(121, 84, 233)
+  );
+  font-family: "Pacifico", cursive;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.215);
+  border-radius: 25px;
+  padding: 20px 80px;
+}
+
+.container h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.container a {
+  text-decoration: none;
+  color: purple;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    font-family: inherit;
+    font-size: 1.4em;
+    padding: 15px;
+    border-radius: 25px;
+    background-color: rgba(153, 13, 175, 0.227);
+    color: rgb(224, 190, 255);
+    border: 0;
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.btn:active {
+    scale: (0.98);
+}
+
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+
+.form-control input {
+  background-color: transparent;
+  width: 100%;
+  padding: 15px 0;
+  border: 0;
+  display: block;
+  border-bottom: 2px solid #fff;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: lightblue;
+}
+
+.form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: lightblue;
+  transform: translateY(-30px);
+}
